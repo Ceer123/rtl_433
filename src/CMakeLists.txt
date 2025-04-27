@@ -82,6 +82,7 @@ add_library(r_433 STATIC
     devices/celsia_czc1.c
     devices/chamberlain_cwpirc.c
     devices/chuango.c
+    devices/circrane.c
     devices/cmr113.c
     devices/companion_wtr001.c
     devices/cotech_36_7959.c
