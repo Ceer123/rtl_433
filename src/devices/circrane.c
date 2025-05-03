@@ -15,7 +15,7 @@ Circrane Pool Sensor decoder, tested with SH-PT-002.
 
 Credit to HSkul
 
-The transmitted code is 45 bits sent 8 times (single 0 bit at the end), except for the last transmission the ending zero bit is missing.
+The transmitted code is 45 bits sent 8 times (single 0 bit at the end), except for the last transmission the ending zero bit is missing.  The messages are transmitted every 50 seconds.
 
 10010011 1011   0000    TTTTTTTTTTTT 00000000   CCCCCCCC 0
 -------------   ----    ------------ --------   -------- -
@@ -171,8 +171,8 @@ r_device const circrane = {
         .modulation  = OOK_PULSE_PPM,
         .short_width = 1948,  // short gap
         .long_width  = 3900,  // long gap
-        .gap_limit   = 3928,  // some distance above long
-        .reset_limit = 8788, // a bit longer than packet gap
+        .gap_limit   = 3950,  // some distance above long
+        .reset_limit = 8828, // a bit longer than packet gap
         .decode_fn   = &circrane_decode,
         .disabled    = 1, // disabled and hidden, use 0 if there is a MIC, 1 otherwise
         .fields      = output_fields,
